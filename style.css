@@ -1,0 +1,391 @@
+html{
+  scroll-behavior: smooth !important; 
+  }
+  body{
+  background-color: black;
+  width: 100vw;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  }
+  #starter{
+    padding-top: 25vh;
+  display:block;
+  text-align: center;
+  background-color: black;
+  z-index: 9;
+  }
+  #starter h1{
+  animation: blink 1s infinite;
+  color: #002cf1;
+  }
+
+  #muteButton{
+  position: fixed;
+  left: 5vw;
+  bottom: 5vh;
+  color: red;
+  z-index: 8;
+  visibility: hidden;
+  }
+  .container{
+  width: 90%;
+  margin: auto;
+  display: none;
+  }
+  #containerA{
+  height: 1250vh;
+  }
+
+  #separator{
+  height: 100vh;
+  }
+  #color-bar{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 25vw;
+  z-index: 8;
+  }
+  .image-container{
+  width: 60%;
+  margin: auto;
+  }
+  .image-container img{
+  width: 100%;
+  }
+  
+  #frame{
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  }
+  .anchor{
+  background-color: aqua;
+  }
+  h1{
+  color: white;
+  font-size: 36px;
+  position: relative;
+  margin-bottom: 50px;
+  }
+  #part1{
+  padding-top: 10vh;
+  padding-bottom: 60vh;
+  z-index: 7;
+  }
+  p, li{
+  color: white;
+  list-style-type: none; 
+  font-size: 24px;
+  }
+  section{
+  height: 100vh;
+  width: 100%;
+  }
+  .meatandpotatoes{
+  visibility:hidden;
+  position: relative;
+  z-index: 6;
+  padding-bottom: 10%;
+  }
+  #part10{
+  padding-top: 30vh;
+  text-align: center;
+  }
+  #part10 p{
+  color: #EDAA3D;
+  font-size: 60pt;
+  }
+  #flex1{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 1vw;
+  height: 80vh;
+  position: relative;
+  }
+  .row102{
+  width: 60%;
+  }
+  .row102 video{
+  vertical-align: middle;
+  }
+  .row101, .row103 {
+  width: 20%;
+  }
+  .row101 ul, .row103 ul{
+  position: relative;
+  top: 40%;
+  padding: 10%;
+  }
+  #flex2{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 1vw;
+  position: fixed;
+  top: 25vh;
+  }
+  .row111{
+  width: 50%;
+  position: relative;
+  margin-left: 5%;
+  margin-right: auto;
+  }
+  #randomwords1{
+  color: #E8DEC7;
+  position: absolute;
+  top:50%;
+  z-index: 5;
+  }
+  #randomwords2{
+  color: #EDAA3D;
+  position: absolute;
+  top:50%;
+  z-index: 4;
+  }
+  #randomwords3{
+  color: #E54929;
+  position: absolute;
+  top:50%;
+  z-index: 3;
+  }
+  #randomwords4{
+  color: #D72A2D;
+  position: absolute;
+  top:50%;
+  z-index: 2;
+  }
+  #randomwords5{
+  color: #9F1E33;
+  position: absolute;
+  top:50%;
+  z-index: 1;
+  }
+  .row112{
+  width: 40%;
+  margin-left: auto; 
+  margin-right: -1%;
+  }
+  .row201{
+  width: 50%;
+  margin-left: -5%;
+  }
+  #flex3{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 1vw;
+  }
+  .row301{
+  width: 50%;
+  }
+  .row302{
+  width: 50%;
+  text-align: center;
+  }
+  .row302 p{
+    font-size: 40pt;
+    }
+  #buffer{
+  text-align: center;
+  padding-top: 40vh;
+  }
+  
+  #vid1{
+  margin-left: -50%;
+  }
+  a:link{
+  text-decoration: none;
+  }
+  li:hover{
+  transform: scale(1.05);
+  }
+  
+  @media only screen and (max-width: 800px) {
+      p, li{
+          font-size: 14px;
+          }
+      h1{
+          font-size: 28px;
+          }
+      .row101, .row103 {
+          width: 40%;
+          }
+      li{
+          margin-top: -5px;
+          margin-bottom: -5px;
+      }
+  }
+  @media only screen and (min-width: 801px) and (max-width: 1500px) {
+      p, li{
+          font-size: 20px;
+          }
+      h1{
+          font-size: 34px;
+          }
+  }
+  @media only screen and (max-width: 1500px) {
+      .image-container img{
+          position: relative;
+          margin-left: 0;
+          width: 100%;
+          }
+  }
+  
+  @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+  
+  /*Loader*/
+  #loader {
+      margin-top: 40vh;
+      margin-left: 45vw;
+      margin-bottom: 100vh;
+      border: 16px solid #f3f3f3; /* Light grey */
+      border-top: 16px solid #3498db; /* Blue */
+      background-color: black;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      animation: spin 2s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  
+  /* Navigation crap */
+    #menuToggle
+  {
+    display: none;
+    position: fixed;
+    top: 5vh;
+    left: 5vw;
+    z-index: 8;
+    user-select: none;
+    visibility: hidden;
+  }
+  #menuToggle a
+  {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+  }
+  #menuToggle a:hover
+  {
+    color: red;
+  }
+  #menuToggle input
+  {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 8; /* and place it over the hamburger */
+  }
+  #menuToggle span
+  {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 10px;
+    z-index: 7;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  #menu
+  {
+    position: absolute;
+    left: -5vw;
+    width: auto;
+    padding: 50px;
+    background: #ededed;
+    list-style-type: none;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+  #menu li
+  {
+    padding: 10px 0;
+    font-size: 22px;
+    color: black;
+  }
+  #menuToggle input:checked ~ ul
+  {
+    transform: none;
+  }
+  
+  /* MAP ANIMATION */
+  .path {
+    stroke-dasharray: 3000;
+    stroke-dashoffset: 3000;
+    animation: dash 5s linear forwards infinite;
+  }
+  
+  @keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+  }
+  
+  #bigContainer{
+  width: 100%;
+  margin:auto;
+  z-index: 3;
+  position: sticky;
+  top: 0;
+  height: 1px;
+  }
+  #containerMap{
+  height: 1px;
+  width: 100%;
+  text-align: center;
+  padding-top: 15vh;
+  }
+  #mapSequence{
+  width: 80%;
+  }
+  
+  #stationAnimation{
+  position: fixed;
+  top: 0;
+  width: 90%;
+  background-color: black;
+  z-index: 7;
+  height: 12vh;
+  visibility: hidden;
+  }
+  #stationNames{
+  position: fixed;
+  top: 0;
+  left: 22.5%;
+  width: 55%;
+  z-index: 7;
+  height: 10%;
+  visibility: hidden;
+  background-color: black;
+  }
+  #padding{
+  background-color: black;
+  height: 50%;
+  }
+  #stationBar{
+  height: 10%;
+  background-color: #9F1E33;
+  }
+  #line{
+  width: 100%;
+  }

@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+<head>
+<title>The PRT</title>
+<!--JQUERY-->
+<script src="jquery-3.6.4.min.js"></script>
+<!--SCROLL TRIGGER-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<!--JS-->
+<script type="text/javascript" src="script.js"></script>
+<!--CSS-->
+<link href="style.css" rel="stylesheet" type="text/css" id="looks">
+</head>
+
+<body>
+
+<div id="loader"></div>
+<script> $(window).on('load', function () {$('#loader').hide();})</script>
+
+<div id="starter" style="width: 100vw; height: 100vh;">
+    <h1 onclick="startSite()">START</h1>
+    <br>
+    <p>Clicking 'Start' will enable audio and fullscreen.</p>
+</div>  
+
+<div class='container' id="containerA">
+<!--hovers-->   
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span> <!--lines-->
+    <span></span> <!--lines-->
+    <span></span> <!--lines-->
+    <ul id="menu">
+      <a href="#part1"><li>Home</li></a>
+      <a href="#part2"><li>Intro</li></a>
+      <a href="#part3"><li>Origins</li></a>
+      <a href="#part4"><li>Implementation</li></a>
+      <a href="#part5"><li>Operations</li></a>
+      <a href="#part7"><li>Riders</li></a>
+      <a href="#part9"><li>Technicians</li></a>
+      <a href="#part10"><li>Stations</li></a>
+      <a href="#part16"><li>Summary</li></a>
+    </ul>
+  </div>
+</nav>
+
+<a><button id="muteButton" onclick="muteVid()">mute</button></a> <!--Empty <a> tag to prevent weird anchor glitch when clicked-->
+<img src="img/color-bar.png" id="color-bar">
+
+<section id='part1'>
+        <div id="flex1">
+            <div class="row101" style="text-align: right;">
+                <ul>
+                    <a onclick="scroll1()"><li style="transform-origin:center right;">Intro</li></a>
+                    <br>
+                    <a onclick="scroll2()"><li style="transform-origin:center right;">Origins</li></a>
+                    <br>
+                    <a onclick="scroll3()"><li style="transform-origin:center right;">Implementation</li></a>
+                    <br>
+                    <a href="#part5"><li style="transform-origin:center right;">Operations</li></a>
+                </ul>
+            </div>
+            <div class="row102">
+               <video id="vid1" width="200%" loop><source src="vid/Title.mp4"></video>
+            </div>
+            <div class="row103" style="text-align: left;">
+                <ul>
+                    <br>
+                    <a href="#part7"><li style="transform-origin:center left;">Riders</li></a>
+                    <br>
+                    <a href="#part9"><li style="transform-origin:center left;">Technicians</li></a>
+                    <br>
+                    <a href="#part10"><li style="transform-origin:center left;">Stations</li></a>
+                    <br>
+                    <a href="#part16"><li style="transform-origin:center left;">Summary</li></a>
+                </ul>
+            </div>
+        </div>
+</section>
+
+<section id='part2' class="meatandpotatoes">
+    <div id="flex2">
+        <div class="row111" >
+          <h1>Introduction</h1>
+            <p>The PRT is an automated people mover idealized in 1970's Morgantown, proposed by WVU's director of the Industrial Engineering Department, Samy Elias, and researched and developed by the US Department of Transportation. It took five years to build, with the planning starting in 1970 and a fully built product finally coming into operation by 1975.</p>
+        </div>
+    </div>
+    <div class="row112">
+      <div class='image-container'>
+          <img id="frame2" src="img/1.jpg">
+      </div>
+    </div>
+</section>
+
+<section id='part3' class="meatandpotatoes">
+    <div id="flex2">
+        <div class="row111">
+        <h1>Origins</h1>
+        <p> First conceived in the 1960's, Personal Rapid Transit was devised as a way to move people from a starting point to their final destination without having to stop at any points in between. <br><br>The routes are run in two different modes: demand and schedule. Demand operation is employed during regular hours when ridership volume is not as high and works as the name suggests. Scheduled operation, however, seeks to optimize speed of transit by deploying cars to predetermined stations with pre planned destinations at specific times to anticipate ridership needs during peak hours of demand.
+        </div>
+      </div>
+        <div class="row112">
+            <div class='image-container'>
+                <img id="frame3" src="img/7.jpg">
+            </div>
+        </div>
+</section>
+
+<section id='part4' class="meatandpotatoes">
+    <div id="flex2">
+        <div class="row111">
+          <h1>Implementation</h1>
+            <p>The experiment was three years late, and four times over budget, costing sixty-four million dollars. At this stage of operations in 1975, known as Phase I, this cost included the initial concrete guideway with metal rails for the high-voltage electricity that powers the vehicles spanning its entire length, three stations designed by architect Frederick Harris located at the downtown business core (Walnut Station), the university's Downtown campus (Beechurst Station), and the Engineering campus (Engineering Station), and a fleet of over forty cars. <br><br> In 1978, the system was expanded under Phase II of the project which included a two-station addition from the Engineering campus towards student dorms (Towers Station) and the hospital and football stadium (HSC Station).</p>
+        </div>
+     </div>
+     <div class="row112">
+      <div class='image-container'>
+          <img id="frame4" src="img/13.jpg">
+      </div>
+  </div>
+</section>
+
+    <!-- map animation -->
+    <div id="bigContainer">
+        <div id="containerMap">
+          <img id="mapSequence" src="img/svg/1.png">
+        </div>
+    </div>
+    <!-- map animation -->
+
+</div> <!--containerA div end from top -->
+
+<div class="container" id="containerB">
+<div id="separator"><br></div>
+
+<section id='part5' class="meatandpotatoes">
+    <div id="flex2">
+        <div class="row201">
+          <h1>Operations</h1>
+            <p>Running along a four-mile corridor by the Monongahela river, the PRT operates on a near-daily schedule from early morning to late evening Monday to Friday, with reduced hours on Saturdays excluding holidays and school breaks. The frequency of the system, combined with the speed of the cars and the comparatively small headway between each vehicle, is a big selling point of what makes the PRT so useful for students, faculty, and local residents alike. During off-peak periods, the typical wait for a ride is five minutes, with the wait being as small as one minute between rides during peak hours of travel.</p>
+        </div>
+    </div>
+</section>
+
+<section id='part6' class="meatandpotatoes">
+    <div id="flex2">
+        <div class="row201">
+          <h1>Vehicles</h1>
+            <p>While people associated with the university can ride for free with their school-provided ID, members of the community only have to pay a fare of fifty cents per ride to get on their way. At a maximum speed of thirty-five miles an hour, the sixty nine cars that run along the line can accommodate an average of 15 people at a time and have an estimated daily ridership of twelve thousand people a day post-COVID as of 2022, or over two million passengers a year. The vehicles being group sized also allows for more flexibility in riders' destinations, and the lighter weight gives way to higher speeds and lower costs. Operations are not affected by inclement weather either, as the entire stretch of the tracks is heated with a warm solution running through pipes under the tracks supplied by a nearby steam plant and three boilers, making it unaffected by any snow or ice that might accumulate in the colder months. 
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id='part7' class="meatandpotatoes">
+    <div id="flex2">
+        <div class="row201">
+          <h1>Riders</h1>
+            <p>To ride the PRT, a person must first plan their entry and exit points; locate the station nearest to them, and where they need to request a ride to. Once at their starting point, they climb up the stairs to the fare landing where they scan their ID, or pay the fifty cent fare, and choose the destination they require on the electronic screen. Some stations have two different platforms to depart from, with each serving different destinations, so it is important to carefully observe signage to determine which turnstiles to walk towards. Once the destination is chosen and the rider is past the fare gate, the computers in the control room automatically generate a ride to display on the electronic board along with its departure time, then assign the ride to the vehicle already parked at the station. If no cars are present, one will be assigned to travel to the station to pick up the passenger.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id='part8' class="meatandpotatoes">
+    <div id="flex2">
+        <div class="row201">
+          <h1>Sounds</h1>
+            <p>While waiting for their trip, passengers can hear multiple call-outs coming from the speakers including “Do not open doors or windows while on board the vehicles”, “Do not overload the vehicles”, and ”No more than fifteen passengers per car”. Not all edicts from above come from a computer, however. People who jump the gates without paying or swiping are swiftly admonished by a human inside the system's control facility. Once it's time to board, the computer will call out the gate number to board for the rider's specific destination, the car will play chimes as its door opens, allow twenty seconds for everyone going on that trip to board, then play a different set of chimes as the door closes. Were the vehicle to become overloaded during the boarding process, a series of beeps would play on repeat until the excess weight, usually the last person to board, is removed from the car. 
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id='part9' class="meatandpotatoes">
+    <div id="flex2">
+        <div class="row201">
+          <h1>Technicians</h1>
+            <p>Behind all this are the people that drive around town in the mornings and evenings opening and closing the gates to the stations, hop on dated, white Jeep Wranglers to travel inside the tracks towards a point of required maintenance whenever necessary, and ensure the vehicles remain in proper function throughout the day inside of the control facility and outside in the test track and storage yard; the trained technicians that keep the PRT running. There are three main stations inside the control room that operate the system, which are: Communications, in charge of monitoring the line's stations and providing guidance and warnings to riders, the Auto Train Supervision station, or ATS, observing the path and operation of all the cars in service on a screen called the Line Overview, or LO; tiny dots in perpetual movement, and the supervising station coordinating everyone.
+            </p>
+        </div>
+    </div>
+</section>
+
+<div id="stations">
+
+<section id='part10' class="meatandpotatoes">
+    <p>STATIONS</p>
+</section>
+<div id="stationAnimation">
+<div id="stationNames">
+  <div id="padding"></div>
+  <div id="stationBar">
+  <svg id="line"><line id="line-path" stroke="white" stroke-width="2.5%" stroke-linecap="square" x1="0" y1="0" x2="100%" y2="0"/></svg>
+  </div>
+  <h1 class="randomwords" id="randomwords1">WALNUT</h1>
+  <h1 class="randomwords" id="randomwords2">WALNUT - BEECHURST</h1>
+  <h1 class="randomwords" id="randomwords3">WALNUT - BEECHURST - ENGINEERING</h1>
+  <h1 class="randomwords" id="randomwords4">WALNUT - BEECHURST - ENGINEERING - TOWERS</h1>
+  <h1 class="randomwords" id="randomwords5">WALNUT - BEECHURST - ENGINEERING - TOWERS - HEALTH SCIENCE</h1>
+  <div id="padding"></div>
+</div>
+</div>
+
+<section id='part11' class="meatandpotatoes">
+    <div id="flex3">
+        <div class="row301">
+              <video id="vid2" width="100%"  autoplay loop muted><source src="vid/Arrival_walnut.mp4"></video>
+        </div>
+        <div class="row302">
+            <p>PRT arriving at Walnut station.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id='part12' class="meatandpotatoes">
+
+    <div id="flex3">
+        <div class="row301">
+            <video id="vid2" width="100%"  autoplay loop muted><source src="vid/Arrival_beechurst.mp4"></video>
+        </div>
+        <div class="row302">
+            <p>PRT arriving at Beechurst station.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id='part13' class="meatandpotatoes">
+
+    <div id="flex3">
+        <div class="row301">
+            <video id="vid2" width="100%"  autoplay loop muted><source src="vid/Arrival_engineering.mp4"></video>
+        </div>
+        <div class="row302">
+            <p>PRT arriving at Engineering station.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id='part14' class="meatandpotatoes">
+
+    <div id="flex3">
+        <div class="row301">
+            <video id="vid2" width="100%"  autoplay loop muted><source src="vid/Arrival_towers.mp4"></video>
+        </div>
+        <div class="row302">
+            <p>PRT arriving at Towers station.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id='part15' class="meatandpotatoes">
+
+    <div id="flex3">
+        <div class="row301">
+            <video id="vid2" width="100%"  autoplay loop muted><source src="vid/Arrival_health.mp4"></video>
+        </div>
+        <div class="row302">
+            <p>PRT arriving at Health Science.
+            </p>
+        </div>
+    </div>
+</section>
+</div> <!--Stations div end-->
+
+<section id='part16' class="meatandpotatoes">
+    <div id="flex2">
+        <div class="row201" >
+          <h1>Summary</h1>
+            <p>At the end of the day, the system has proved to be popular. It is an essential part of student commutes and city-wide transit during football and basketball game days, as well as a unique mode of transportation that stands the test of time and proves to be reliable and safe more often than not. <br><br>It is also a selling point for prospective students, and an attraction and object of admiration for engineers and innovative public transit enthusiasts across the country and the world around.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id='part16'>
+  <div id="buffer">
+    <h1>THANK YOU</h1>
+  </div>
+</section>
+
+</div> <!--containerB div end-->
+</body>
+
+</html>
