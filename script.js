@@ -162,23 +162,42 @@ function fader4(){
     }
 }
 //preload map
-// Configuration
 const totalFrames = 704;
 const preloadedImages = [];
+let loadedCount = 0;
 
-// Preload function
 function preloadImages() {
-  for (let i = 1; i <= totalFrames; i++) {
-    const img = new Image();
-    img.src = 'img/svg/' + i + '.png';
-    preloadedImages[i] = img; // Cache the image object in an array
-  }
-  console.log("Preloading of " + totalFrames + " images started...");
+    for (let i = 1; i <= totalFrames; i++) {
+        const img = new Image();
+        
+        // When an image finishes loading (successfully or with error)
+        img.onload = img.onerror = function() {
+            loadedCount++;
+            updateProgress();
+        };
+
+        img.src = 'img/svg/' + i + '.png';
+        preloadedImages[i] = img;
+    }
+}
+
+function updateProgress() {
+    const percentage = Math.floor((loadedCount / totalFrames) * 100);
+    
+    // Update the visual bar and text
+    $('#progressBar').css('width', percentage + '%');
+    $('#loadingText').text(percentage + '%');
+
+    // Once all images are done, hide the screen
+    if (loadedCount >= totalFrames) {
+        $('#loadingScreen').fadeOut(500); // Smoothly hide the loader
+    }
 }
 
 $(document).ready(function() {
-  preloadImages();
+    preloadImages();
 });
+
 
 //map section animation image flip
 function animateMap() {
