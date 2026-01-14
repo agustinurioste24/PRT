@@ -362,10 +362,11 @@ html{
   #stationAnimation{
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background-color: black;
   z-index: 7;
-  height: 12vh;
+  height: 15vh;
   visibility: hidden;
   }
   #stationNames{
