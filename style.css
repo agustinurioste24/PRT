@@ -362,7 +362,7 @@ html{
   #stationAnimation{
   position: fixed;
   top: 0;
-  width: 90%;
+  width: 100%;
   background-color: black;
   z-index: 7;
   height: 12vh;
