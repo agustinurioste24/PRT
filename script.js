@@ -161,19 +161,39 @@ function fader4(){
     $('#frame4').attr('src', 'img/13.jpg'); //display default image if number is negative
     }
 }
+//preload map
+// Configuration
+const totalFrames = 704;
+const preloadedImages = [];
+
+// Preload function
+function preloadImages() {
+  for (let i = 1; i <= totalFrames; i++) {
+    const img = new Image();
+    img.src = 'img/svg/' + i + '.png';
+    preloadedImages[i] = img; // Cache the image object in an array
+  }
+  console.log("Preloading of " + totalFrames + " images started...");
+}
+
+$(document).ready(function() {
+  preloadImages();
+});
 
 //map section animation image flip
-function animateMap(){
-var altura = $(window).height()*3.8;
-const y = window.pageYOffset - altura;
-    var calc2 = Math.min(Math.floor(y/10) -115, 704); //704 images
-    if (calc2 >= 1){
-    $('#mapSequence').attr('src', 'img/svg/'+calc2+'.png');
-    }
-    else {
-    $('#mapSequence').attr('src', 'img/svg/1.png'); //display default image if number is negative
-    }
-  }
+function animateMap() {
+  var altura = $(window).height() * 3.8;
+  const y = window.pageYOffset - altura;
+  
+  // Calculate the frame index
+  var calc2 = Math.min(Math.floor(y / 10) - 115, totalFrames); 
+  
+  // Determine final source
+  var targetSrc = (calc2 >= 1) ? 'img/svg/' + calc2 + '.png' : 'img/svg/1.png';
+
+  // Update the image src attribute
+  $('#mapSequence').attr('src', targetSrc);
+}
 
 function fader5(){
   var altura = $(window).height()*13;
