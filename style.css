@@ -364,9 +364,9 @@ html{
   top: 0;
   left: 0;
   width: 100%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.788);
   z-index: 7;
-  height: 15vh;
+  height: 25vh;
   visibility: hidden;
   }
   #stationNames{
